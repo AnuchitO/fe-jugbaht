@@ -8,8 +8,6 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Header from "./components/Header";
-import ListHeader from "./components/ListHeader";
-import ListItems from "./components/ListItems";
 import styles from "./App.module.scss";
 import "./styles.css";
 import History from "./components/History";
