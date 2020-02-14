@@ -20,21 +20,18 @@ const UserHistory = () => {
     { title: "ส้มตำ", description: "05 OCT | ทุกคน", amount: 1245.25 },
     { title: "ส้มตำ", description: "05 OCT | ทุกคน", amount: 1245.25 },
     { title: "ส้มตำ", description: "05 OCT | ทุกคน", amount: 1245.25 },
-    { title: "ส้มตำ", description: "05 OCT | ทุกคน", amount: 1245.25 },
-    { title: "ส้มตำ", description: "05 OCT | ทุกคน", amount: 1245.25 },
-    { title: "ส้มตำ", description: "05 OCT | ทุกคน", amount: 1245.25 },
-    { title: "ส้มตำ", description: "05 OCT | ทุกคน", amount: 1245.25 },
-    { title: "ส้มตำ", description: "05 OCT | ทุกคน", amount: 1245.25 },
-    { title: "ส้มตำ", description: "05 OCT | ทุกคน", amount: 1245.25 }
+    { title: "กล้วยทอด", description: "05 OCT | ทุกคน", amount: 1245.25 }
   ];
 
   return (
     <div className={styles.root}>
-      <ListHeader
-        title={"รายการใช้จ่าย"}
-        total={items.length}
-        color={"Green"}
-      />
+      <div className={styles.headerList}>
+        <ListHeader
+          title={"รายการใช้จ่าย"}
+          total={items.length}
+          color={"Green"}
+        />
+      </div>
       <div className={styles.history}>
         <ListItems items={items} />
       </div>

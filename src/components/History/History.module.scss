@@ -1,9 +1,16 @@
+@import "../../base.scss";
+
 .root {
  align-content: center;
+ margin-bottom: $footer-min-height;
+}
+
+.headerList {
+  position: sticky;
+  top: $header-min-height;
 }
 
 .history {
-  min-height: 15vh;
-  // overflow: scroll;
-  // scroll-behavior: smooth;
+  z-index: -1;
+  position: sticky;
 }

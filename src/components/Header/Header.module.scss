@@ -3,7 +3,7 @@
 .root {
  position: sticky;
  top: 0;
- min-height: 56px;
+ min-height: $header-min-height;
  background-color: $primary-color;
  display: flex;
  justify-content: center;
