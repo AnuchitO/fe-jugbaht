@@ -24,7 +24,7 @@ const ListItems = ({ items = examples || [] }) => {
         <Fragment>
           <ListItem className={styles.listItem} key={uuid()}>
             <ListItemIcon>
-              <FastfoodRoundedIcon fontSize="large" light={true} />
+              <FastfoodRoundedIcon fontSize="large" light />
             </ListItemIcon>
             <ListItemText primary={item.title} secondary={item.description} />
             <div className={styles.amount}>{item.amount}</div>
