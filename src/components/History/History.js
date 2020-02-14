@@ -1,6 +1,7 @@
 import React from "react";
 import ListHeader from "../ListHeader";
 import ListItems from "../ListItems";
+import uuid from "uuid/v1";
 import styles from "./History.module.scss";
 
 const UserHistory = () => {

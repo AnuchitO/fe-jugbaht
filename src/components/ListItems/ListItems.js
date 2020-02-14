@@ -21,17 +21,15 @@ const ListItems = ({ items = examples || [] }) => {
   return (
     <List>
       {items.map((item, index) => (
-        <Fragment>
-          <ListItem className={styles.listItem} key={uuid()}>
+        <Fragment key={uuid()}>
+          <ListItem className={styles.listItem}>
             <ListItemIcon>
-              <FastfoodRoundedIcon fontSize="large" light />
+              <FastfoodRoundedIcon fontSize="large" />
             </ListItemIcon>
             <ListItemText primary={item.title} secondary={item.description} />
             <div className={styles.amount}>{item.amount}</div>
           </ListItem>
-          {index !== items.length ? (
-            <Divider variant={"middle"} key={uuid()} />
-          ) : null}
+          {index !== items.length ? <Divider variant={"middle"} /> : null}
         </Fragment>
       ))}
     </List>
