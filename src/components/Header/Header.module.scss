@@ -1,0 +1,16 @@
+@import "../../base.scss";
+
+.root {
+ position: sticky;
+ top: 0;
+ min-height: 56px;
+ background-color: $primary-color;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.trip {
+  height: 100%;
+  color: rgba($color: white, $alpha: 0.6);
+}

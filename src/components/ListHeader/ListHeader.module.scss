@@ -1,0 +1,42 @@
+.root {
+  display: flex;
+  min-height: 56px;
+  padding: 16px 20px;
+  margin: 0 8px;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0 2px 8px 0 rgba($color: #000000, $alpha: 0.12);
+  margin-top: -28px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 16px;
+  text-shadow: 0 2px 8px rgba($color: black, $alpha: 0.3);
+}
+
+.transaction {
+  color: gray;
+  font-size: 12px;
+}
+
+.amount {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 2px 12px;
+  border-radius: 24px;
+  text-shadow: 0 2px 8px rgba($color: black, $alpha: 0.12);
+}
+
+.amountGreen {
+  @extend .amount;
+  color: green;
+  background-color: #d5f1b1;
+}
+
+.amountRed {
+  @extend .amount;
+  color: red;
+  background-color: #f1b1b17d;
+}

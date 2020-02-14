@@ -1,0 +1,11 @@
+.root {
+ align-content: center;
+ top: 0;
+ height: 100%;
+}
+
+.history {
+  min-height: 15vh;
+  overflow: scroll;
+  scroll-behavior: smooth;
+}
