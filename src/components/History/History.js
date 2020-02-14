@@ -25,12 +25,6 @@ const UserHistory = () => {
     { title: "ส้มตำ", description: "05 OCT | ทุกคน", amount: 1245.25 },
     { title: "ส้มตำ", description: "05 OCT | ทุกคน", amount: 1245.25 },
     { title: "ส้มตำ", description: "05 OCT | ทุกคน", amount: 1245.25 },
-    { title: "ส้มตำ", description: "05 OCT | ทุกคน", amount: 1245.25 },
-    { title: "ส้มตำ", description: "05 OCT | ทุกคน", amount: 1245.25 },
-    { title: "ส้มตำ", description: "05 OCT | ทุกคน", amount: 1245.25 },
-    { title: "ส้มตำ", description: "05 OCT | ทุกคน", amount: 1245.25 },
-    { title: "ส้มตำ", description: "05 OCT | ทุกคน", amount: 1245.25 },
-    { title: "ส้มตำ", description: "05 OCT | ทุกคน", amount: 1245.25 },
     { title: "ส้มตำ", description: "05 OCT | ทุกคน", amount: 1245.25 }
   ];
 

@@ -3,11 +3,10 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import Divider from "@material-ui/core/Divider";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemAvatar from "@material-ui/core/ListItemAvatar";
 import ListItemText from "@material-ui/core/ListItemText";
 import FastfoodRoundedIcon from "@material-ui/icons/FastfoodRounded";
-import Avatar from "@material-ui/core/Avatar";
 import styles from "./ListItems.module.scss";
+import uuid from "uuid/v1";
 
 const examples = [
   {
@@ -23,14 +22,16 @@ const ListItems = ({ items = examples || [] }) => {
     <List>
       {items.map((item, index) => (
         <Fragment>
-          <ListItem className={styles.listItem}>
+          <ListItem className={styles.listItem} key={uuid()}>
             <ListItemIcon>
               <FastfoodRoundedIcon fontSize="large" light={true} />
             </ListItemIcon>
             <ListItemText primary={item.title} secondary={item.description} />
             <div className={styles.amount}>{item.amount}</div>
           </ListItem>
-          {index !== items.length - 1 ? <Divider variant={"middle"} /> : null}
+          {index !== items.length ? (
+            <Divider variant={"middle"} key={uuid()} />
+          ) : null}
         </Fragment>
       ))}
     </List>
