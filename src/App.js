@@ -29,8 +29,8 @@ export default function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <div className={styles.root}>
-          <Header />
-          <Hero />
+          <Header title={"ทริปเขาภูเก็ต"} />
+          <Hero title={"คุณได้เงินคืน"} />
           <History />
         </div>
         <Footer />

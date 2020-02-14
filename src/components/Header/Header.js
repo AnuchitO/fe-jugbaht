@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./Header.module.scss";
 
-const Header = () => (
+const Header = ({ title = "" }) => (
   <div className={styles.root}>
-    <div className={styles.trip}>ทริปเขาภูเก็ต</div>
+    <div className={styles.trip}>{title}</div>
   </div>
 );
 
