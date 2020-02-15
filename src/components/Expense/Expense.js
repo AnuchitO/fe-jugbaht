@@ -81,7 +81,7 @@ const Expense = () => {
           color="primary"
           size="large"
           fullWidth
-          className={styles.createTripButton}
+          className={styles.saveButton}
         >
           บันทึก
         </Button>
