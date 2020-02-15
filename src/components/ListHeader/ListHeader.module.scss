@@ -1,3 +1,5 @@
+@import "../../base.scss";
+
 .root {
   display: flex;
   min-height: 56px;
@@ -32,7 +34,7 @@
 .amountGreen {
   @extend .amount;
   color: green;
-  background-color: #d5f1b1;
+  background-color: $light-green;
 }
 
 .amountRed {

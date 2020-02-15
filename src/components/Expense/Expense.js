@@ -1,26 +1,87 @@
 import React from "react";
 import styles from "./Expense.module.scss";
-import { TextField, FormControl, FormHelperText } from "@material-ui/core";
-import { style } from "@material-ui/system";
+import Badge from "@material-ui/core/Badge";
+import CheckCircleRoundedIcon from "@material-ui/icons/CheckCircleRounded";
+import {
+  TextField,
+  FormControl,
+  FormHelperText,
+  Button,
+  IconButton,
+  Avatar
+} from "@material-ui/core";
+import Checkbox from "@material-ui/core/Checkbox";
+import FiberManualRecordSharpIcon from "@material-ui/icons/FiberManualRecordSharp";
+
+const MemberCheckbox = () => (
+  <Checkbox
+    icon={<FiberManualRecordSharpIcon className={styles.uncheckedIcon} />}
+    checkedIcon={<CheckCircleRoundedIcon className={styles.checkedIcon} />}
+  />
+);
 
 const Expense = () => {
   return (
-    <div className={styles.root}>
-      <div className={style.title}>จดๆ</div>
-      <form className={styles.root} noValidate autoComplete="off">
-        <FormControl>
-          <TextField id="outlined-basic" label="จั๊กบาท" variant="outlined" />
-          <FormHelperText id="my-helper-text">
-            We'll never share your email.
-          </FormHelperText>
+    <div>
+      <div className={styles.root}>
+        <div className={styles.title}>คุณจ่ายเงิน</div>
+        <FormControl fullWidth className={styles.groupAmount}>
+          <TextField
+            className={styles.amount}
+            inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
+            label="จั๊กบาท"
+            variant="outlined"
+            fullWidth
+          />
+          {/* <FormHelperText>ค่าน้ำปั่น</FormHelperText> */}
         </FormControl>
-        <FormControl>
-          <TextField id="outlined-basic" label="จั๊กบาท" variant="outlined" />
-          <FormHelperText id="my-helper-text">
-            We'll never share your email.
-          </FormHelperText>
-        </FormControl>
-      </form>
+        <div className={styles.note}>ค่าน้ำมัน</div>
+        <div className={styles.title}>หารใครบ้าง</div>
+        <div className={styles.members}>
+          <div className={styles.member}>
+            <IconButton>
+              <Badge
+                className={styles.badge}
+                anchorOrigin={{
+                  vertical: "bottom",
+                  horizontal: "right"
+                }}
+                badgeContent={<MemberCheckbox />}
+                overlap="circle"
+              >
+                <Avatar>ห</Avatar>
+              </Badge>
+            </IconButton>
+            <div>หน่อง</div>
+          </div>
+          <div className={styles.member}>
+            <IconButton>
+              <Badge
+                anchorOrigin={{
+                  vertical: "bottom",
+                  horizontal: "right"
+                }}
+                badgeContent={<MemberCheckbox />}
+                overlap="circle"
+              >
+                <Avatar>ต</Avatar>
+              </Badge>
+            </IconButton>
+            <div>ต้อม</div>
+          </div>
+        </div>
+      </div>
+      <div className={styles.save}>
+        <Button
+          variant="outlined"
+          color="primary"
+          size="large"
+          fullWidth
+          className={styles.createTripButton}
+        >
+          บันทึก
+        </Button>
+      </div>
     </div>
   );
 };

@@ -4,8 +4,60 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 16px 16px;
+}
+
+.save {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  margin: auto;
 }
 
 .title {
-  font-size: 66px;
+  font-size: 24px;
+  color: rgba($color: rgb(42, 41, 41), $alpha: 0.6);
+}
+
+.groupAmount {
+  margin: 16px 0;
+  align-items: flex-end;
+}
+
+.amount {
+  // how to make lable align right
+  margin: 8px 0;
+  text-align: right;
+}
+
+.checkedIcon {
+  color: rgb(78, 184, 78);
+}
+
+.uncheckedIcon {
+  color: $background-color;
+}
+
+.badge {
+  display: flex;
+}
+
+.members {
+  display: flex;
+  flex-direction: row;
+}
+
+.member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.note {
+  display: flex;
 }
