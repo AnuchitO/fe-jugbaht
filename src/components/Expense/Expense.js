@@ -67,11 +67,11 @@ const Expense = () => {
           {/* <FormHelperText>ค่าน้ำปั่น</FormHelperText> */}
         </FormControl>
         <FormLabel className={styles.title}>จ่ายค่าอะไร</FormLabel>
-        <div className={styles.note}>
-          <FormControl className={styles.note}>
+        <div className={styles.description}>
+          <FormControl className={styles.description}>
             <RadioGroup
-              aria-label="note"
-              name="note"
+              aria-label="description"
+              name="description"
               // value={value}
               // onChange={handleChange}
             >
@@ -83,7 +83,7 @@ const Expense = () => {
                 />
               ))}
             </RadioGroup>
-            {/* TODO: add note by using comment */}
+            {/* TODO: add description by using comment */}
           </FormControl>
         </div>
         <div className={styles.title}>หารใครบ้าง</div>

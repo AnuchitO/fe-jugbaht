@@ -16,9 +16,12 @@
   justify-content: center;
   justify-items: center;
   margin: auto;
+  z-index: 1;
+
 }
 
 .saveButton {
+  z-index: 1;
   text-shadow: 0 2px 8px rgba($color: black, $alpha: 0.6);
 }
 
@@ -50,7 +53,6 @@
 
 .badge {
   display: flex;
-  z-index: -1;
 }
 
 .members {
@@ -70,7 +72,7 @@
   text-shadow: 0 2px 8px rgba($color: black, $alpha: 0.2);
 }
 
-.note {
+.description {
   display: flex;
   flex-direction: row;
   flex-basis: 100%;
