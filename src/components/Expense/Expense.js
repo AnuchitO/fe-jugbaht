@@ -5,10 +5,14 @@ import CheckCircleRoundedIcon from "@material-ui/icons/CheckCircleRounded";
 import {
   TextField,
   FormControl,
+  FormLabel,
   FormHelperText,
+  FormControlLabel,
   Button,
   IconButton,
-  Avatar
+  Avatar,
+  Radio,
+  RadioGroup
 } from "@material-ui/core";
 import Checkbox from "@material-ui/core/Checkbox";
 import FiberManualRecordSharpIcon from "@material-ui/icons/FiberManualRecordSharp";
@@ -38,6 +42,16 @@ const Expense = () => {
     { name: "จุ้น" }
   ];
 
+  const options = [
+    { value: "อื่นๆ" },
+    { value: "น้ำปั่น" },
+    { value: "ส้มตำ" },
+    { value: "หมูกระทะ" },
+    { value: "ทางด่วน" },
+    { value: "ค่าโรงแรม" },
+    { value: "เติมน้ำมัน" }
+  ];
+
   return (
     <div>
       <div className={styles.root}>
@@ -52,7 +66,26 @@ const Expense = () => {
           />
           {/* <FormHelperText>ค่าน้ำปั่น</FormHelperText> */}
         </FormControl>
-        <div className={styles.note}>ค่าน้ำมัน</div>
+        <FormLabel className={styles.title}>จ่ายค่าอะไร</FormLabel>
+        <div className={styles.note}>
+          <FormControl className={styles.note}>
+            <RadioGroup
+              aria-label="note"
+              name="note"
+              // value={value}
+              // onChange={handleChange}
+            >
+              {options.map(option => (
+                <FormControlLabel
+                  value={option.value}
+                  control={<Radio />}
+                  label={option.value}
+                />
+              ))}
+            </RadioGroup>
+            {/* TODO: add note by using comment */}
+          </FormControl>
+        </div>
         <div className={styles.title}>หารใครบ้าง</div>
         <div className={styles.members}>
           {members.map(member => (
