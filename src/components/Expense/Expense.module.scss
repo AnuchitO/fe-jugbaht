@@ -49,6 +49,10 @@
 .members {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+  margin-bottom: $footer-min-height;
+  justify-content: center;
 }
 
 .member {

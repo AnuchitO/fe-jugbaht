@@ -21,6 +21,22 @@ const MemberCheckbox = () => (
 );
 
 const Expense = () => {
+  const members = [
+    { name: "ต้อม" },
+    { name: "หน่อง" },
+    { name: "หน่อง" },
+    { name: "หน่อง" },
+    { name: "หน่อง" },
+    { name: "หน่อง" },
+    { name: "หน่อง" },
+    { name: "หน่อง" },
+    { name: "หน่อง" },
+    { name: "หน่อง" },
+    { name: "หน่อง" },
+    { name: "หน่อง" },
+    { name: "กบ" },
+    { name: "จุ้น" }
+  ];
   return (
     <div>
       <div className={styles.root}>
@@ -38,42 +54,29 @@ const Expense = () => {
         <div className={styles.note}>ค่าน้ำมัน</div>
         <div className={styles.title}>หารใครบ้าง</div>
         <div className={styles.members}>
-          <div className={styles.member}>
-            <IconButton>
-              <Badge
-                className={styles.badge}
-                anchorOrigin={{
-                  vertical: "bottom",
-                  horizontal: "right"
-                }}
-                badgeContent={<MemberCheckbox />}
-                overlap="circle"
-              >
-                <Avatar>ห</Avatar>
-              </Badge>
-            </IconButton>
-            <div>หน่อง</div>
-          </div>
-          <div className={styles.member}>
-            <IconButton>
-              <Badge
-                anchorOrigin={{
-                  vertical: "bottom",
-                  horizontal: "right"
-                }}
-                badgeContent={<MemberCheckbox />}
-                overlap="circle"
-              >
-                <Avatar>ต</Avatar>
-              </Badge>
-            </IconButton>
-            <div>ต้อม</div>
-          </div>
+          {members.map(member => (
+            <div className={styles.member}>
+              <IconButton>
+                <Badge
+                  className={styles.badge}
+                  anchorOrigin={{
+                    vertical: "bottom",
+                    horizontal: "right"
+                  }}
+                  badgeContent={<MemberCheckbox />}
+                  overlap="circle"
+                >
+                  <Avatar>{member.name.slice(0, 1)}</Avatar>
+                </Badge>
+              </IconButton>
+              <div>{member.name}</div>
+            </div>
+          ))}
         </div>
       </div>
       <div className={styles.save}>
         <Button
-          variant="outlined"
+          variant="contained"
           color="primary"
           size="large"
           fullWidth
