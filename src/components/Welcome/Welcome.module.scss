@@ -1,0 +1,39 @@
+@import "../../base.scss";
+
+.root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, $primary-color 30%, rgb(0, 33, 248) 90%);
+}
+
+.jugbaht {
+  color: white;
+  font-size: 56px;
+  font-weight: bold;
+  text-shadow: 0 2px 8px rgba($color: black, $alpha: 0.3);
+  letter-spacing: 2px;
+  margin-bottom: 0px;
+}
+
+.welcome {
+  color: white;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: rgba($color: white, $alpha: 0.7);
+  margin: 0px 20px;
+}
+
+.trip {
+  display: flex;
+  margin: 40px;
+}
+
+.createTripButton {
+  color: white;
+  font-weight: 500;
+  border-color: white;
+  letter-spacing: 2px;
+}

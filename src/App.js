@@ -11,6 +11,7 @@ import Header from "./components/Header";
 import styles from "./App.module.scss";
 import "./styles.css";
 import History from "./components/History";
+import Welcome from "./components/Welcome/Welcome";
 
 const theme = createMuiTheme({
   palette: {
@@ -29,11 +30,12 @@ export default function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <div className={styles.root}>
-          <Header title={"ทริปเขาภูเก็ต"} />
+          <Welcome />
+          {/* <Header title={"ทริปเขาภูเก็ต"} />
           <Hero title={"คุณได้เงินคืน"} />
           <History />
+          <Footer /> */}
         </div>
-        <Footer />
       </ThemeProvider>
     </StylesProvider>
   );
