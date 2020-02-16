@@ -70,17 +70,73 @@ $payer-icon-size: 50px;
 
 }
 
-.checkedIcon {
-  color: rgb(78, 184, 78);
-}
-
-.uncheckedIcon {
-  color: $background-color;
-}
-
 .badge {
   display: flex;
 }
+
+.checkedBase{
+  color: rgb(78, 184, 78);
+}
+
+.uncheckedBase {
+  color: $background-color;
+}
+
+$badgeIcon1x: 40px;
+.badgeIcon {
+  width: $badgeIcon1x;
+  height: $badgeIcon1x;  
+}
+
+.checkedIcon {
+  @extend .checkedBase;
+  width: $badgeIcon1x/2;
+  height: $badgeIcon1x/2;  
+}
+
+.uncheckedIcon {
+  @extend .uncheckedBase;
+  width: $badgeIcon1x/2;
+  height: $badgeIcon1x/2;  
+}
+
+$badgeIcon2x: 60px;
+.badgeIcon2x {
+  width: $badgeIcon2x;
+  height: $badgeIcon2x;  
+}
+
+.checkedIcon2x {
+  @extend .checkedBase;
+  width: $badgeIcon2x/2;
+  height: $badgeIcon2x/2;  
+}
+
+.uncheckedIcon2x {
+  @extend .uncheckedBase;
+  width: $badgeIcon2x/2;
+  height: $badgeIcon2x/2;  
+}
+
+
+$badgeIcon3x: 80px;
+.badgeIcon3x {
+  width: $badgeIcon3x;
+  height: $badgeIcon3x;  
+}
+
+.checkedIcon3x {
+  @extend .checkedBase;
+  width: $badgeIcon3x/2;
+  height: $badgeIcon3x/2;  
+}
+
+.uncheckedIcon3x {
+  @extend .uncheckedBase;
+  width: $badgeIcon3x/2;
+  height: $badgeIcon3x/2;  
+}
+
 
 .members {
   display: flex;

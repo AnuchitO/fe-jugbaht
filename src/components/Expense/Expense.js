@@ -110,7 +110,9 @@ const Expense = () => {
                   badgeContent={<MemberCheckbox />}
                   overlap="circle"
                 >
-                  <Avatar>{member.name.slice(0, 1)}</Avatar>
+                  <Avatar className={styles.badgeIcon}>
+                    {member.name.slice(0, 1)}
+                  </Avatar>
                 </Badge>
               </IconButton>
               <div>{member.name}</div>
