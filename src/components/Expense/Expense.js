@@ -149,7 +149,7 @@ const Expense = () => {
             classes={{
               input: styles.amount
             }}
-            placeholder="0.00"
+            placeholder="฿0.00"
             inputProps={{
               inputMode: "numeric",
               pattern: "[0-9]*"
