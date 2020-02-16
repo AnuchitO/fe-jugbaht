@@ -25,6 +25,7 @@ import {
 import Checkbox from "@material-ui/core/Checkbox";
 import FiberManualRecordSharpIcon from "@material-ui/icons/FiberManualRecordSharp";
 import ListItems from "../ListItems/ListItems";
+import Note from "./Note";
 
 const MemberCheckbox = () => (
   <Checkbox
@@ -32,72 +33,6 @@ const MemberCheckbox = () => (
     checkedIcon={<CheckCircleRoundedIcon className={styles.checkedIcon} />}
   />
 );
-
-const Description = () => {
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const [selectedIndex, setSelectedIndex] = React.useState(1);
-
-  const handleClickListItem = event => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleMenuItemClick = (event, index) => {
-    setSelectedIndex(index);
-    setAnchorEl(null);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-
-  const options = [
-    { value: "อื่นๆ" },
-    { value: "อาหารค่ำ" },
-    { value: "น้ำปั่น" },
-    { value: "ส้มตำ" },
-    { value: "หมูกระทะ" },
-    { value: "ทางด่วน" },
-    { value: "ค่าโรงแรม" },
-    { value: "เติมน้ำมัน" }
-  ];
-
-  return (
-    <div>
-      <List component="nav" aria-label="Device settings">
-        <ListItem
-          button
-          aria-haspopup="true"
-          aria-controls="lock-menu"
-          onClick={handleClickListItem}
-        >
-          <ListItemText
-            disableTypography={true}
-            className={styles.description}
-            primary={options[selectedIndex].value}
-          />
-        </ListItem>
-      </List>
-      <Menu
-        id="lock-menu"
-        anchorEl={anchorEl}
-        keepMounted
-        open={Boolean(anchorEl)}
-        onClose={handleClose}
-      >
-        {options.map((option, index) => (
-          <MenuItem
-            key={option.value}
-            disabled={index === 0}
-            selected={index === selectedIndex}
-            onClick={event => handleMenuItemClick(event, index)}
-          >
-            {option.value}
-          </MenuItem>
-        ))}
-      </Menu>
-    </div>
-  );
-};
 
 const Expense = () => {
   const members = [
@@ -155,10 +90,9 @@ const Expense = () => {
               pattern: "[0-9]*"
             }}
           />
-          {/* <FormHelperText>ค่าน้ำปั่น</FormHelperText> */}
         </div>
-        <div className={styles.description}>
-          <Description />
+        <div>
+          <Note />
         </div>
         <div className={styles.title}>หารใครบ้าง</div>
         <div className={styles.members}>
