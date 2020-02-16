@@ -149,7 +149,7 @@ const Expense = () => {
             fullWidth
             placeholder="0.00"
             inputProps={{
-              inputMode: "numberic",
+              inputMode: "numeric",
               pattern: "[0-9]*",
               "aria-lable": "amount"
             }}
