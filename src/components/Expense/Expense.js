@@ -64,10 +64,10 @@ const Expense = () => {
         <div className={styles.title}>จดๆ ค่าใช้จ่าย</div>
         <div className={styles.payer}>
           {/* TODO: use selected menus to change payer https://material-ui.com/components/menus/#selected-menus */}
-
           <List component="nav" aria-label="payer">
             <ListItem
               button
+              disableGutters={true}
               aria-haspopup="true"
               aria-controls="lock-menu"
               aria-label="หน่อง"

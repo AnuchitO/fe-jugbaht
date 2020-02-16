@@ -10,16 +10,23 @@
 .payer {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+  width: 100%;
 }
 
 .payerIconContainer {
-  margin: auto 16px;
+  margin-right: 16px;
+  flex-direction: column;
+  justify-content: center;
+  text-shadow: 0 2px 8px rgba($color: black, $alpha: 0.2);
 }
 
 $payer-icon-size: 50px;
 .payerIcon {
   width: $payer-icon-size;
   height: $payer-icon-size;  
+  text-shadow: 0 2px 8px rgba($color: black, $alpha: 0.2);
 }
 
 .save {
@@ -48,13 +55,11 @@ $payer-icon-size: 50px;
 }
 
 .groupAmount {
-  margin: 16px 0;
   align-items: flex-end;
 }
 
 .amount {
   // how to make lable align right
-  margin: 8px 0;
   color: black;
   font-size: 46px;
   font-weight: 500;
@@ -78,7 +83,7 @@ $payer-icon-size: 50px;
   flex-wrap: wrap;
   flex-basis: 100%;
   margin-bottom: $footer-min-height;
-  justify-content: center;
+  // justify-content: center;
 }
 
 .member {
