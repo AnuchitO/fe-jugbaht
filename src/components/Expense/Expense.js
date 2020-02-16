@@ -143,19 +143,20 @@ const Expense = () => {
             </ListItem>
           </List>
         </div>
-        <FormControl fullWidth className={styles.groupAmount}>
+        <div fullWidth className={styles.groupAmount}>
           <InputBase
-            className={styles.amount}
             fullWidth
+            classes={{
+              input: styles.amount
+            }}
             placeholder="0.00"
             inputProps={{
               inputMode: "numeric",
-              pattern: "[0-9]*",
-              "aria-lable": "amount"
+              pattern: "[0-9]*"
             }}
           />
           {/* <FormHelperText>ค่าน้ำปั่น</FormHelperText> */}
-        </FormControl>
+        </div>
         <div className={styles.description}>
           <Description />
         </div>
