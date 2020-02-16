@@ -6,6 +6,7 @@ import Autocomplete, {
 } from "@material-ui/lab/Autocomplete";
 import parse from "autosuggest-highlight/parse";
 import match from "autosuggest-highlight/match";
+import styles from "./Note.module.scss";
 
 const filter = createFilterOptions();
 export default function Highlights() {
@@ -50,10 +51,8 @@ export default function Highlights() {
       renderInput={params => (
         <TextField
           {...params}
-          label="Highlights"
-          variant="outlined"
+          // label="จ่ายค่าอะไร"
           fullWidth
-          margin="normal"
         />
       )}
       renderOption={(option, { inputValue }) => {
