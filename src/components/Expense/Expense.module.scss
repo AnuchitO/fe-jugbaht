@@ -7,6 +7,21 @@
   margin: 16px 16px;
 }
 
+.payer {
+  display: flex;
+  flex-direction: row;
+}
+
+.payerIconContainer {
+  margin: auto 16px;
+}
+
+$payer-icon-size: 50px;
+.payerIcon {
+  width: $payer-icon-size;
+  height: $payer-icon-size;  
+}
+
 .save {
   position: fixed;
   display: flex;

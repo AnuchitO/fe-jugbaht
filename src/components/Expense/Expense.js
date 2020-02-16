@@ -7,15 +7,20 @@ import {
   FormControl,
   FormLabel,
   FormHelperText,
+  ListItemText,
   FormControlLabel,
   Button,
   IconButton,
   Avatar,
   Radio,
-  RadioGroup
+  RadioGroup,
+  ListItemAvatar,
+  ListItem,
+  List
 } from "@material-ui/core";
 import Checkbox from "@material-ui/core/Checkbox";
 import FiberManualRecordSharpIcon from "@material-ui/icons/FiberManualRecordSharp";
+import ListItems from "../ListItems/ListItems";
 
 const MemberCheckbox = () => (
   <Checkbox
@@ -55,7 +60,29 @@ const Expense = () => {
   return (
     <div>
       <div className={styles.root}>
-        <div className={styles.title}>คุณจ่ายเงิน</div>
+        <div className={styles.title}>จดๆ ค่าใช้จ่าย</div>
+        <div className={styles.payer}>
+          {/* TODO: use selected menus to change payer https://material-ui.com/components/menus/#selected-menus */}
+
+          <List component="nav" aria-label="payer">
+            <ListItem
+              button
+              aria-haspopup="true"
+              aria-controls="lock-menu"
+              aria-label="หน่อง"
+              // onClick={handleClickListItem}
+            >
+              <ListItemAvatar className={styles.payerIconContainer}>
+                <Avatar className={styles.payerIcon} />
+              </ListItemAvatar>
+              <ListItemText
+                primary="หน่อง"
+                secondary={"เป็นคนจ่ายเงิน"}
+                // secondary={options[selectedIndex]}
+              />
+            </ListItem>
+          </List>
+        </div>
         <FormControl fullWidth className={styles.groupAmount}>
           <TextField
             className={styles.amount}
