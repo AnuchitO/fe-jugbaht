@@ -7,14 +7,6 @@
   margin: 16px 16px;
 }
 
-.ex {
-  width: 30%;
-  margin: auto;
-  display: block;
-  padding: 10px;
-  text-align: center;
-}
-
 .payer {
   display: flex;
   flex-direction: row;
@@ -27,7 +19,6 @@
   margin-right: 16px;
   flex-direction: column;
   justify-content: center;
-  text-shadow: 0 2px 8px rgba($color: black, $alpha: 0.2);
 }
 
 $payer-icon-size: 50px;

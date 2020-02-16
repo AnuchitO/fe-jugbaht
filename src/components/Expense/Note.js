@@ -8,12 +8,24 @@ import parse from "autosuggest-highlight/parse";
 import match from "autosuggest-highlight/match";
 import styles from "./Note.module.scss";
 
+const options = [
+  { title: "อาหารค่ำ" },
+  { title: "น้ำปั่น" },
+  { title: "ส้มตำ" },
+  { title: "หมูกระทะ" },
+  { title: "ทางด่วน" },
+  { title: "ค่าโรงแรม" },
+  { title: "เติมน้ำมัน" },
+  { title: "อื่นๆ" }
+];
+
 const filter = createFilterOptions();
-export default function Highlights() {
-  const [value, setValue] = React.useState(null);
+export default function Note() {
+  const [value, setValue] = React.useState({
+    title: options[0].title
+  });
   return (
     <Autocomplete
-      id="highlights-demo"
       style={{ width: 300 }}
       value={value}
       onChange={(event, newValue) => {
@@ -27,7 +39,7 @@ export default function Highlights() {
 
         setValue(newValue);
       }}
-      options={top100Films}
+      options={options}
       getOptionLabel={option => {
         if (typeof option === "string") {
           return option;
@@ -75,14 +87,3 @@ export default function Highlights() {
     />
   );
 }
-
-const top100Films = [
-  { title: "อื่นๆ" },
-  { title: "อาหารค่ำ" },
-  { title: "น้ำปั่น" },
-  { title: "ส้มตำ" },
-  { title: "หมูกระทะ" },
-  { title: "ทางด่วน" },
-  { title: "ค่าโรงแรม" },
-  { title: "เติมน้ำมัน" }
-];
