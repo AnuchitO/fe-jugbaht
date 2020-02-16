@@ -96,7 +96,7 @@ const Expense = () => {
         <div>
           <Note />
         </div>
-        <div className={styles.title}>หารใครบ้าง</div>
+        <div className={styles.title}>หารผู้ใด๋แหน่</div>
         <div className={styles.members}>
           {members.map(member => (
             <div className={styles.member}>
