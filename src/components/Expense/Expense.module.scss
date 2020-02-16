@@ -61,7 +61,7 @@ $payer-icon-size: 50px;
 .amount {
   // how to make lable align right
   color: black;
-  font-size: 46px;
+  font-size: 76px;
   font-weight: 500;
 }
 
@@ -95,10 +95,9 @@ $payer-icon-size: 50px;
 }
 
 .description {
+  @extend .title;
   display: flex;
   flex-direction: row;
   flex-basis: 100%;
-  max-height: 40px;
   width: 100%;
-  overflow: scroll;
 }

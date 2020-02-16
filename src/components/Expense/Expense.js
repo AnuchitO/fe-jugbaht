@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Expense.module.scss";
 import Badge from "@material-ui/core/Badge";
 import CheckCircleRoundedIcon from "@material-ui/icons/CheckCircleRounded";
+import { makeStyles } from "@material-ui/core/styles";
 import {
   TextField,
   FormControl,
@@ -11,6 +12,8 @@ import {
   FormControlLabel,
   Button,
   IconButton,
+  Menu,
+  MenuItem,
   Avatar,
   Radio,
   RadioGroup,
@@ -30,6 +33,72 @@ const MemberCheckbox = () => (
   />
 );
 
+const Description = () => {
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [selectedIndex, setSelectedIndex] = React.useState(1);
+
+  const handleClickListItem = event => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleMenuItemClick = (event, index) => {
+    setSelectedIndex(index);
+    setAnchorEl(null);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  const options = [
+    { value: "อื่นๆ" },
+    { value: "อาหารค่ำ" },
+    { value: "น้ำปั่น" },
+    { value: "ส้มตำ" },
+    { value: "หมูกระทะ" },
+    { value: "ทางด่วน" },
+    { value: "ค่าโรงแรม" },
+    { value: "เติมน้ำมัน" }
+  ];
+
+  return (
+    <div>
+      <List component="nav" aria-label="Device settings">
+        <ListItem
+          button
+          aria-haspopup="true"
+          aria-controls="lock-menu"
+          onClick={handleClickListItem}
+        >
+          <ListItemText
+            disableTypography={true}
+            className={styles.description}
+            primary={options[selectedIndex].value}
+          />
+        </ListItem>
+      </List>
+      <Menu
+        id="lock-menu"
+        anchorEl={anchorEl}
+        keepMounted
+        open={Boolean(anchorEl)}
+        onClose={handleClose}
+      >
+        {options.map((option, index) => (
+          <MenuItem
+            key={option.value}
+            disabled={index === 0}
+            selected={index === selectedIndex}
+            onClick={event => handleMenuItemClick(event, index)}
+          >
+            {option.value}
+          </MenuItem>
+        ))}
+      </Menu>
+    </div>
+  );
+};
+
 const Expense = () => {
   const members = [
     { name: "ต้อม" },
@@ -46,16 +115,6 @@ const Expense = () => {
     { name: "หน่อง" },
     { name: "กบ" },
     { name: "จุ้น" }
-  ];
-
-  const options = [
-    { value: "อื่นๆ" },
-    { value: "น้ำปั่น" },
-    { value: "ส้มตำ" },
-    { value: "หมูกระทะ" },
-    { value: "ทางด่วน" },
-    { value: "ค่าโรงแรม" },
-    { value: "เติมน้ำมัน" }
   ];
 
   return (
@@ -97,25 +156,8 @@ const Expense = () => {
           />
           {/* <FormHelperText>ค่าน้ำปั่น</FormHelperText> */}
         </FormControl>
-        <FormLabel className={styles.title}>จ่ายค่าอะไร</FormLabel>
         <div className={styles.description}>
-          <FormControl className={styles.description}>
-            <RadioGroup
-              aria-label="description"
-              name="description"
-              // value={value}
-              // onChange={handleChange}
-            >
-              {options.map(option => (
-                <FormControlLabel
-                  value={option.value}
-                  control={<Radio />}
-                  label={option.value}
-                />
-              ))}
-            </RadioGroup>
-            {/* TODO: add description by using comment */}
-          </FormControl>
+          <Description />
         </div>
         <div className={styles.title}>หารใครบ้าง</div>
         <div className={styles.members}>
