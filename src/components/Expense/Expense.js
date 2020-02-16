@@ -16,7 +16,8 @@ import {
   RadioGroup,
   ListItemAvatar,
   ListItem,
-  List
+  List,
+  InputBase
 } from "@material-ui/core";
 import Checkbox from "@material-ui/core/Checkbox";
 import FiberManualRecordSharpIcon from "@material-ui/icons/FiberManualRecordSharp";
@@ -84,12 +85,15 @@ const Expense = () => {
           </List>
         </div>
         <FormControl fullWidth className={styles.groupAmount}>
-          <TextField
+          <InputBase
             className={styles.amount}
-            inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
-            label="จั๊กบาท"
-            variant="outlined"
             fullWidth
+            placeholder="0.00"
+            inputProps={{
+              inputMode: "numberic",
+              pattern: "[0-9]*",
+              "aria-lable": "amount"
+            }}
           />
           {/* <FormHelperText>ค่าน้ำปั่น</FormHelperText> */}
         </FormControl>
