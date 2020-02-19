@@ -11,8 +11,10 @@ import {
   FormLabel,
   FormHelperText,
   ListItemText,
+  Divider,
   FormControlLabel,
   Button,
+  Chip,
   IconButton,
   Icon,
   Menu,
@@ -25,6 +27,7 @@ import {
   List,
   InputBase
 } from "@material-ui/core";
+import RemoveIcon from "@material-ui/icons/Remove";
 import Checkbox from "@material-ui/core/Checkbox";
 import FiberManualRecordSharpIcon from "@material-ui/icons/FiberManualRecordSharp";
 import ListItems from "../ListItems/ListItems";
@@ -58,7 +61,8 @@ const Expense = () => {
   return (
     <div>
       <div className={styles.root}>
-        <div className={styles.title}>จดๆ ค่าใช้จ่าย</div>
+        {/* <div className={styles.title}>จดๆ ค่าใช้จ่าย</div> */}
+        <hr className={styles.closeButton} />
         <div className={styles.payer}>
           {/* TODO: use selected menus to change payer https://material-ui.com/components/menus/#selected-menus */}
           <ListItem
@@ -73,8 +77,18 @@ const Expense = () => {
               <Avatar className={styles.payerIcon} />
             </ListItemAvatar>
             <ListItemText
-              primary="หน่อง"
-              secondary={"เป็นคนจ่ายเงิน"}
+              primary={<div className={styles.payerName}>หน่อง</div>}
+              secondary={
+                <Chip
+                  className={styles.payment}
+                  size="small"
+                  variant="outlined"
+                  icon={<CheckCircleRoundedIcon />}
+                  label="เงินสด"
+                  clickable
+                  color="primary"
+                />
+              }
               // secondary={options[selectedIndex]}
             />
             <ChevronRightIcon color="primary" />
