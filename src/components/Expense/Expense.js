@@ -4,6 +4,7 @@ import Badge from "@material-ui/core/Badge";
 import CheckCircleRoundedIcon from "@material-ui/icons/CheckCircleRounded";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+import MonetizationOnRoundedIcon from "@material-ui/icons/MonetizationOnRounded";
 import { makeStyles } from "@material-ui/core/styles";
 import {
   TextField,
@@ -83,7 +84,7 @@ const Expense = () => {
                   className={styles.payment}
                   size="small"
                   variant="outlined"
-                  icon={<CheckCircleRoundedIcon />}
+                  icon={<MonetizationOnRoundedIcon />}
                   label="เงินสด"
                   clickable
                   color="primary"
@@ -107,7 +108,7 @@ const Expense = () => {
             }}
           />
         </div>
-        <div>
+        <div className={styles.note}>
           <Note />
         </div>
         <div className={styles.title}>หารผู้ใด๋แหน่</div>
