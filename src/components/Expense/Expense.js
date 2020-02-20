@@ -44,6 +44,7 @@ const MemberCheckbox = () => (
 const Expense = () => {
   const members = [
     { name: "ต้อม" },
+    { name: "ต้อม" },
     { name: "หน่อง" },
     { name: "หน่อง" },
     { name: "หน่อง" },
@@ -81,7 +82,7 @@ const Expense = () => {
               primary={<div className={styles.payerName}>หน่อง</div>}
               secondary={
                 <Chip
-                  className={styles.payment}
+                  className={styles.paymentIcon}
                   size="small"
                   variant="outlined"
                   icon={<MonetizationOnRoundedIcon />}
@@ -111,7 +112,7 @@ const Expense = () => {
         <div className={styles.note}>
           <Note />
         </div>
-        <div className={styles.title}>หารผู้ใด๋แหน่</div>
+        <div className={styles.shareWithWhom}>หารผู้ใด๋แหน่</div>
         <div className={styles.members}>
           {members.map(member => (
             <div className={styles.member}>

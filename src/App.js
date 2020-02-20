@@ -34,9 +34,9 @@ export default function App() {
           {/* <Welcome /> */}
           <Header title={"ทริปเขาภูเก็ต"} />
           <Expense />
-          <Hero title={"คุณได้เงินคืน"} />
+          {/* <Hero title={"คุณได้เงินคืน"} />
           <History />
-          <Footer />
+          <Footer /> */}
         </div>
       </ThemeProvider>
     </StylesProvider>
