@@ -61,17 +61,13 @@ export default function Note() {
 
         return filtered;
       }}
-      renderInput={params => {
-        console.log(params);
-        return (
-          <TextField
-            {...params}
-            // label="จ่ายค่าอะไร"
-            fullWidth
-            className={styles.noteInput}
-          />
-        );
-      }}
+      renderInput={params => (
+        <TextField
+          {...params}
+          // label="จ่ายค่าอะไร"
+          fullWidth
+        />
+      )}
       renderOption={(option, { inputValue }) => {
         const matches = match(option.title, inputValue);
         const parts = parse(option.title, matches);
