@@ -13,6 +13,7 @@ import "./styles.css";
 import History from "./components/History";
 import Welcome from "./components/Welcome/Welcome";
 import Expense from "./components/Expense/Expense";
+import Summary from "./components/Summary";
 
 const theme = createMuiTheme({
   palette: {
@@ -33,7 +34,8 @@ export default function App() {
         <div className={styles.root}>
           {/* <Welcome /> */}
           <Header title={"ทริปเขาภูเก็ต"} />
-          <Expense />
+          <Summary />
+          {/* <Expense /> */}
           {/* <Hero title={"คุณได้เงินคืน"} />
           <History />
           <Footer /> */}
