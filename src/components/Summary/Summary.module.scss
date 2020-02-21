@@ -10,6 +10,7 @@
   top: $header-min-height - 1;
   height: 100px;
   width: 100%;
+  z-index: -1;
   border-bottom-left-radius: 100px;
   background-color: $primary-color;
 }
@@ -17,8 +18,10 @@
 .items {
   display: flex;
   flex-direction: column;
+  flex-shrink: 100px;
   position: sticky;
   margin-top: -50px;
+  z-index: -1;
   padding: 0px 0px;
   overflow: scroll;
 }
@@ -38,7 +41,6 @@
 
 .left {
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
 }
@@ -62,7 +64,5 @@
 }
 
 .right {
-  font-size: 18px;
-  letter-spacing: 2px;
-  font-weight: 500;
+  display: flex;
 }
