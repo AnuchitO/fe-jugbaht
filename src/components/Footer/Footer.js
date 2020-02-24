@@ -7,6 +7,7 @@ const Footer = () => (
   <div className={styles.root}>
     <div />
     <div className={styles.add}>
+      {/* TODO: https://material-ui.com/components/drawers/ */}
       <AddCircleRoundedIcon style={{ fontSize: 80, color: "#2979ff" }} />
     </div>
     <div />
