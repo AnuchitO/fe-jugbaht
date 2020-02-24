@@ -70,6 +70,10 @@ export default function Note() {
               ...params.InputProps,
               disableUnderline: true
             }}
+            inputProps={{
+              ...params.inputProps,
+              className: styles.note
+            }}
             // label="จ่ายค่าอะไร"
             fullWidth
           />
