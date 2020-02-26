@@ -14,7 +14,7 @@ const Summary = () => {
     <div className={styles.root}>
       <div className={styles.underHerder} />
       <div className={styles.items}>
-        {Array(100)
+        {Array(20)
           .fill()
           .map(x => (
             <div className={styles.item}>

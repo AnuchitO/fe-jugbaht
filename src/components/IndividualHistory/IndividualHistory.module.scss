@@ -1,0 +1,12 @@
+@import "../../base.scss";
+
+.root {
+  display: flex;
+  flex-direction: column;
+}
+
+.headerList {
+  position: sticky;
+  top: $header-min-height;
+  margin-top: -28px;
+}
