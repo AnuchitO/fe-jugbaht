@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import ListHeader from "../ListHeader";
 import ListItems from "../ListItems";
 import styles from "./IndividualHistory.module.scss";
+import { Collapse } from "@material-ui/core";
 
 const IndividualHistory = () => {
   const items = [
@@ -69,9 +70,11 @@ const IndividualHistory = () => {
               color={"Green"}
               amount={record.totalAmount}
             />
-            <div className={styles.history}>
-              <ListItems items={record.items} />
-            </div>
+            <Collapse in={true} timeout="auto" unmountOnExit>
+              <div className={styles.history}>
+                <ListItems items={record.items} />
+              </div>
+            </Collapse>
           </Fragment>
         ))}
       </div>

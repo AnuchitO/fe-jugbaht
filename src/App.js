@@ -37,10 +37,10 @@ export default function App() {
           <Header title={"ทริปเขาภูเก็ต"} />
           {/* <Summary /> */}
           {/* <Expense /> */}
-          {/* <Hero title={"คุณได้เงินคืน"} /> */}
+          <Hero title={"คุณได้เงินคืน"} />
           {/* <History /> */}
           {/* <Footer /> */}
-          <Hero title={"คุณจ่ายเงิน"} />
+          {/* <Hero title={"คุณจ่ายเงิน"} /> */}
           <IndividualHistory />
         </div>
       </ThemeProvider>
