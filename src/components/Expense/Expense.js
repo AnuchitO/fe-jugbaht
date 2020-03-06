@@ -29,6 +29,7 @@ import {
   InputBase
 } from "@material-ui/core";
 import RemoveIcon from "@material-ui/icons/Remove";
+import PersonAddIcon from "@material-ui/icons/PersonAdd";
 import Checkbox from "@material-ui/core/Checkbox";
 import FiberManualRecordSharpIcon from "@material-ui/icons/FiberManualRecordSharp";
 import ListItems from "../ListItems/ListItems";
@@ -134,6 +135,12 @@ const Expense = () => {
               <div>{member.name}</div>
             </div>
           ))}
+          <div className={styles.member}>
+            <IconButton size="medium" color="primary">
+              <PersonAddIcon />
+            </IconButton>
+            <div>&nbsp;</div>
+          </div>
         </div>
       </div>
       <div className={styles.save}>

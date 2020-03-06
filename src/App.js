@@ -36,12 +36,12 @@ export default function App() {
           {/* <Welcome /> */}
           <Header title={"ทริปเขาภูเก็ต"} />
           {/* <Summary /> */}
-          {/* <Expense /> */}
-          <Hero title={"คุณได้เงินคืน"} />
+          <Expense />
+          {/* <Hero title={"คุณได้เงินคืน"} /> */}
           {/* <History /> */}
           {/* <Footer /> */}
           {/* <Hero title={"คุณจ่ายเงิน"} /> */}
-          <IndividualHistory />
+          {/* <IndividualHistory /> */}
         </div>
       </ThemeProvider>
     </StylesProvider>
