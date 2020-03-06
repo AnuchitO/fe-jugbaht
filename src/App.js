@@ -7,6 +7,7 @@ import {
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
+import Trip from "./components/Trip";
 import Header from "./components/Header";
 import styles from "./App.module.scss";
 import "./styles.css";
@@ -36,12 +37,13 @@ export default function App() {
           {/* <Welcome /> */}
           <Header title={"ทริปเขาภูเก็ต"} />
           {/* <Summary /> */}
-          <Expense />
+          {/* <Expense /> */}
           {/* <Hero title={"คุณได้เงินคืน"} /> */}
           {/* <History /> */}
           {/* <Footer /> */}
           {/* <Hero title={"คุณจ่ายเงิน"} /> */}
           {/* <IndividualHistory /> */}
+          <Trip />
         </div>
       </ThemeProvider>
     </StylesProvider>
