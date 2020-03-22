@@ -36,14 +36,14 @@ export default function App() {
         <div className={styles.root}>
           {/* <Welcome /> */}
           <Header title={"ทริปเขาภูเก็ต"} />
-          {/* <Summary /> */}
+          <Summary />
           {/* <Expense /> */}
           {/* <Hero title={"คุณได้เงินคืน"} /> */}
           {/* <History /> */}
           {/* <Footer /> */}
           {/* <Hero title={"คุณจ่ายเงิน"} /> */}
           {/* <IndividualHistory /> */}
-          <Trip />
+          {/* <Trip /> */}
         </div>
       </ThemeProvider>
     </StylesProvider>
