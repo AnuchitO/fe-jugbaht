@@ -28,12 +28,12 @@
   margin: 0;
 }
 
-.payerContainer {
-  width: 100%;
+.expansionPanelSummary {
+  margin: 0;
 }
 
-.expansionPanel{
-  box-shadow: 0 0px 0px 0;
+.payerContainer {
+  width: 100%;
 }
 
 .payer {
@@ -54,6 +54,22 @@
   flex-direction: column;
   justify-content: center;
 }
+
+.expansionPanel{
+  box-shadow: 0 0px 0px 0;
+}
+
+.payerlist {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.payerlistName {
+  font-size: 16px;
+  text-shadow: 0 2px 8px rgba($color: black, $alpha: 0.2);
+}
+
 
 $payer-icon-size: 50px;
 .payerIcon {
@@ -184,7 +200,7 @@ $badgeIcon3x: 80px;
   flex-direction: row;
   flex-wrap: wrap;
   flex-basis: 100%;
-  margin-bottom: $footer-min-height;
+  margin-bottom: ($footer-min-height/2);
   justify-content: center;
 }
 
@@ -194,6 +210,10 @@ $badgeIcon3x: 80px;
   align-items: center;
   justify-content: center;
   text-shadow: 0 2px 8px rgba($color: black, $alpha: 0.2);
+}
+
+.addMember {
+  margin-bottom: $footer-min-height;
 }
 
 .description {

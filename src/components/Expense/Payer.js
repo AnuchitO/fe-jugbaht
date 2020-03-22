@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from "./Expense.module.scss";
-import { Button, ThemeProvider, ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails, Typography, FormControlLabel, Checkbox, ExpansionPanelActions } from '@material-ui/core';
+import { Button, ThemeProvider, ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails, Typography, FormControlLabel, Checkbox, ExpansionPanelActions, List } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import MonetizationOnRoundedIcon from "@material-ui/icons/MonetizationOnRounded";
@@ -21,6 +21,10 @@ import {
 const Payer = () => {
   const [expanded, setExpanded] = React.useState(false);
 
+  const members = [
+    { name: "เขียบ" },
+    { name: "หน่อง" }
+  ]
   return (
     <div className={styles.payerContainer}>
       <ExpansionPanel expanded={expanded} onChange={() => setExpanded(!expanded)} classes={{
@@ -31,6 +35,9 @@ const Payer = () => {
           aria-label="Expand"
           aria-controls="additional-actions1-content"
           id="additional-actions1-header"
+          classes={{
+            content: styles.expansionPanelSummary
+          }}
         >
           <div className={styles.payer}>
             <ListItem
@@ -59,20 +66,26 @@ const Payer = () => {
           </div>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
-          <div className={styles.payer}>
-            <ListItem
-              button
-              disableGutters={true}
-              aria-haspopup="true"
-              onClick={() => setExpanded(false)}
-            >
-              <ListItemAvatar className={styles.payerIconContainer}>
-                <Avatar className={styles.badgeIcon} />
-              </ListItemAvatar>
-              <ListItemText
-                primary={<div className={styles.payerName}>เขียบ</div>}
-              />
-            </ListItem>
+          <div className={styles.payerlist}>
+            {
+              members.map(member => (
+                <ListItem
+                  button
+                  disableGutters={true}
+                  aria-haspopup="true"
+                  onClick={() => setExpanded(false)}
+                >
+                  <ListItemAvatar className={styles.payerlistAvatar}>
+                    <Avatar className={styles.payerlistAvatar} >
+                      {member.name.slice(0, 2)}
+                    </Avatar>
+                  </ListItemAvatar>
+                  <ListItemText
+                    primary={<div className={styles.payerlistName}>{member.name}</div>}
+                  />
+                </ListItem>
+              ))
+            }
           </div>
         </ExpansionPanelDetails>
       </ExpansionPanel>

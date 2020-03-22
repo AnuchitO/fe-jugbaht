@@ -106,19 +106,18 @@ const Expense = () => {
                   overlap="circle"
                 >
                   <Avatar className={styles.badgeIcon}>
-                    {member.name.slice(0, 1)}
+                    {member.name.slice(0, 2)}
                   </Avatar>
                 </Badge>
               </IconButton>
               <div>{member.name}</div>
             </div>
           ))}
-          <div className={styles.member}>
-            <IconButton size="medium" color="primary">
-              <PersonAddIcon />
-            </IconButton>
-            <div>&nbsp;</div>
-          </div>
+        </div>
+        <div className={styles.addMember}>
+          <IconButton size="medium" color="primary">
+            <PersonAddIcon />
+          </IconButton>
         </div>
       </div>
       <div className={styles.save}>
