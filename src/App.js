@@ -36,8 +36,8 @@ export default function App() {
         <div className={styles.root}>
           {/* <Welcome /> */}
           <Header title={"ทริปเขาภูเก็ต"} />
-          <Summary />
-          {/* <Expense /> */}
+          {/* <Summary /> */}
+          <Expense />
           {/* <Hero title={"คุณได้เงินคืน"} /> */}
           {/* <History /> */}
           {/* <Footer /> */}

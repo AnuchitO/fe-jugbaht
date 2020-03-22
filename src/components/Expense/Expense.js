@@ -26,7 +26,14 @@ import {
   ListItemAvatar,
   ListItem,
   List,
-  InputBase
+  InputBase,
+  SwipeableDrawer,
+  ListItemIcon,
+  Popper,
+  Grow,
+  Paper,
+  ClickAwayListener,
+  MenuList
 } from "@material-ui/core";
 import RemoveIcon from "@material-ui/icons/Remove";
 import PersonAddIcon from "@material-ui/icons/PersonAdd";
@@ -34,6 +41,7 @@ import Checkbox from "@material-ui/core/Checkbox";
 import FiberManualRecordSharpIcon from "@material-ui/icons/FiberManualRecordSharp";
 import ListItems from "../ListItems/ListItems";
 import Note from "./Note";
+import Payer from "./Payer";
 
 const MemberCheckbox = () => (
   <Checkbox
@@ -66,37 +74,7 @@ const Expense = () => {
       <div className={styles.root}>
         {/* <div className={styles.title}>จดๆ ค่าใช้จ่าย</div> */}
         <hr className={styles.closeButton} />
-        <div className={styles.payer}>
-          {/* TODO: use selected menus to change payer https://material-ui.com/components/menus/#selected-menus */}
-          <ListItem
-            button
-            disableGutters={true}
-            aria-haspopup="true"
-            aria-controls="lock-menu"
-            aria-label="หน่อง"
-            // onClick={handleClickListItem}
-          >
-            <ListItemAvatar className={styles.payerIconContainer}>
-              <Avatar className={styles.payerIcon} />
-            </ListItemAvatar>
-            <ListItemText
-              primary={<div className={styles.payerName}>หน่อง</div>}
-              secondary={
-                <Chip
-                  className={styles.paymentIcon}
-                  size="small"
-                  variant="outlined"
-                  icon={<MonetizationOnRoundedIcon />}
-                  label="เงินสด"
-                  clickable
-                  color="primary"
-                />
-              }
-              // secondary={options[selectedIndex]}
-            />
-            <ChevronRightIcon color="primary" />
-          </ListItem>
-        </div>
+        <Payer />
         <div fullWidth className={styles.groupAmount}>
           <InputBase
             fullWidth

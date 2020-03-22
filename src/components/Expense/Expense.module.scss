@@ -28,6 +28,14 @@
   margin: 0;
 }
 
+.payerContainer {
+  width: 100%;
+}
+
+.expansionPanel{
+  box-shadow: 0 0px 0px 0;
+}
+
 .payer {
   display: flex;
   flex-direction: row;
